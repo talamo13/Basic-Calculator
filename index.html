@@ -10,9 +10,43 @@
 <body>
     <div class="container">
         <div class="calculator">
-            <div class="output-screen">3.1493</div>
-            <div class="row-1">
-                
+            <div class="output-screen">
+                <div class="equation">
+                    <span id="num1">2</span>
+                    <span id="operator">+</span>
+                    <span id="num2">2</span>
+                </div>
+                <div id="answer">4</div>
+            </div>
+            <div class="button-container">
+                <div class="rows">
+                    <button id="AC" onclick="onClick()">AC</button>                
+                    <button id="7" onclick="onClick()">7</button>                
+                    <button id="4" onclick="onClick()">4</button>                
+                    <button id="1" onclick="onClick()">1</button>                
+                    <button id="<" onclick="onClick()"><</button>                
+                </div>
+                <div class="rows">
+                    <button id="( )" onclick="onClick()">( )</button>                
+                    <button id="8" onclick="onClick()">8</button>                
+                    <button id="5" onclick="onClick()">5</button>                
+                    <button id="2" onclick="onClick()">2</button>                
+                    <button id="0" onclick="onClick()">0</button>                
+                </div>
+                <div class="rows">
+                    <button id="%" onclick="onClick()">%</button>                
+                    <button id="9" onclick="onClick()">9</button>                
+                    <button id="6" onclick="onClick()">6</button>                
+                    <button id="3" onclick="onClick()">3</button>                
+                    <button id="." onclick="onClick()">.</button>                
+                </div>
+                <div class="rows">
+                    <button id="/" onclick="onClick()">/</button>                
+                    <button id="x" onclick="onClick()">x</button>                
+                    <button id="-" onclick="onClick()">-</button>                
+                    <button id="+" onclick="onClick()">+</button>                
+                    <button id="=" onclick="onClick()">=</button>                
+                </div>
             </div>
         </div>
     </div>

@@ -1,6 +1,7 @@
 * {
     margin: 0;
     background: linear-gradient(to right, #007991, #78ffd6); 
+    font-family: 'Poppins', sans-serif;
 }
 
 .container {
@@ -17,14 +18,43 @@
 .calculator {
     display: flex;
     margin: 20px;
-    height: 280px;
-    width: 480px;
+    height: 550px;
+    width: 400px;
     align-items: center;
     justify-content: center;
-    padding: 200px; 
     background: #696969;
-    border-radius: 5px;
+    border-radius: 10px;
     position: relative;
+}
+
+button {
+    cursor: pointer;
+    display: flex;
+    margin: 10px 12px;
+    background: black;
+    color: whitesmoke;
+    border-radius: 5px;
+    height: 65px;
+    width: 65px;
+    font-size: 35px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+    width: 800px;
+    margin-top: 125px;
+    background: #696969;
+    align-items: center;
+    justify-content: center;
+}
+
+.rows {
+    background: #696969;
 }
 
 .output-screen {
@@ -35,12 +65,35 @@
     height: 60px;
     border-radius: 15px;
     margin-top: 20px;
-    width: 500px;
+    width: 300px;
     font-weight: bolder;
     font-size: 50px;
     text-align: right;
+    align-items: flex-end;
 }
 
-.button {
-    cursor: pointer;
+.equation {
+    display: flex;
+    outline: none;
+    background: transparent;
+    width: 300px;
+    font-size: 25px;
+    justify-content: flex-end;
+    color: red;
+}
+
+#num1 {
+    background: transparent;
+}
+
+#num2 {
+    background: transparent;    
+}
+
+#operator {
+    background: transparent;
+}
+
+#answer {
+    background: transparent;
 }
