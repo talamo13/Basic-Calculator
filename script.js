@@ -91,11 +91,11 @@ function onClick(event) {
     }
 
     if (operator.textContent == "") {
-        num1.textContent = num.textContent + num1.textContent;
+        num1.textContent = num1.textContent + num.textContent;
         operator.textContent = op.textContent;
     }
     else {
-        num2.textContent = num.textContent + num2.textContent;
+        num2.textContent = num2.textContent + num.textContent;
     }
 
 }
