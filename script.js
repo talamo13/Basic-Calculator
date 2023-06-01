@@ -10,7 +10,7 @@ function onClick(event) {
     let op = document.createElement("span");
 
     if (myButton.id == "AC"){
-
+        clear();
     }
     else if (myButton.id == "7"){
         num.textContent = "7";
@@ -40,7 +40,7 @@ function onClick(event) {
         num.textContent = "0";
     }
     else if (myButton.id == "%"){
-        op.textContent = "<";
+        op.textContent = "%";
     }
     else if (myButton.id == "9"){
         num.textContent = "9";
@@ -61,23 +61,73 @@ function onClick(event) {
         op.textContent = "x";
     }
     else if (myButton.id == "-"){
-        op.textContent = "=";
+        op.textContent = "-";
     }
     else if (myButton.id == "+"){
         op.textContent = "+";
     }
     else if (myButton.id == "="){
-        alert("THIS DOESNT WORK YET");
-    }
+        let variableString1 = num1.textContent;
+        let variableString2 = num2.textContent;
 
-    if (num1.textContent == "") {
-        num1.textContent = num.textContent;
-    }
-    else if (num2.textContent == "") {
-        num2.textContent = num.textContent;
+        let variable1 = parseInt(variableString1);
+        let variable2 = parseInt(variableString2);
+
+        if(operator.textContent == "+"){
+            add(variable1, variable2);
+        }
+        else if(operator.textContent == "-"){
+            sub(variable1, variable2);
+        }
+        else if(operator.textContent == "x"){
+            multiply(variable1, variable2);
+        }
+        else if(operator.textContent == "/"){
+            divide(variable1, variable2);
+        }
+        else if (operator.textContent == "%"){
+            modulo(variable1, variable2);
+        }
     }
 
     if (operator.textContent == "") {
+        num1.textContent = num.textContent + num1.textContent;
         operator.textContent = op.textContent;
     }
+    else {
+        num2.textContent = num.textContent + num2.textContent;
+    }
+
+}
+
+function clear() {
+    num1.textContent = "";
+    num2.textContent = "";
+    operator.textContent = "";
+    answer.textContent = "";
+}
+
+function add(x, y) {
+    let sum = x + y;
+    answer.textContent = sum.toString();
+}
+
+function sub(x, y) {
+    let difference = x - y;
+    answer.textContent = difference.toString();
+}
+
+function multiply(x, y) {
+    let product = x * y;
+    answer.textContent = product.toString();
+}
+
+function divide(x, y) {
+    let quotient = x / y;
+    answer.textContent = quotient.toString();
+}
+
+function modulo(x,y) {
+    let quotient = x % y;
+    answer.textContent = quotient.toString();
 }
